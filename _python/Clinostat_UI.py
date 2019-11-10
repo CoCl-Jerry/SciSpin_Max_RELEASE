@@ -614,7 +614,7 @@ class Ui_MainWindow(object):
         self.actionCreate_Timelapse.setObjectName("actionCreate_Timelapse")
 
         self.retranslateUi(MainWindow)
-        self.tabWidget.setCurrentIndex(2)
+        self.tabWidget.setCurrentIndex(0)
         self.Sensor_tabWidget.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
