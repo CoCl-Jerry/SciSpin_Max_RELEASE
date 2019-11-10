@@ -670,7 +670,7 @@ class Ui_MainWindow(object):
         self.label_3.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-weight:600; color:#000000;\">[ 50 , 2464 ]</span></p></body></html>"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.Imaging_tab), _translate("MainWindow", "IMAGING"))
         self.startImaging_pushButton.setText(_translate("MainWindow", "START TIMELAPSE"))
-        self.snapshot_pushButton.setText(_translate("MainWindow", "SNAPSHOT"))
+        self.snapshot_pushButton.setText(_translate("MainWindow", "FOCUS ZOOM"))
         self.preview_pushButton.setText(_translate("MainWindow", "PREVIEW"))
         self.version_label.setText(_translate("MainWindow", "Firmware: V 1.05 beta"))
         self.ACC_label.setText(_translate("MainWindow", "<html><head/><body><p align=\"center\"><span style=\" font-weight:600;\">Accelerometer</span></p></body></html>"))
