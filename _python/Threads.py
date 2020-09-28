@@ -163,7 +163,7 @@ class Sensor(QThread):
 
     def run(self):
         i2c = busio.I2C(board.SCL, board.SDA)
-        time.sleep(1)
+        time.sleep(5)
         if Settings.acc_attached:
             sensor = adafruit_mma8451.MMA8451(i2c)
         if Settings.temp_attached:
