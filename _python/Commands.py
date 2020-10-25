@@ -115,6 +115,9 @@ def spin_change(mot, self):
 
     if Settings.LINKED:
         if not mot:
+
+            print(int(decimal.Decimal(str(self.frame_spinBox.value())) * 100))
+
             if int(decimal.Decimal(str(self.frame_spinBox.value())) * 100) in Settings.speed_dict:
                 Settings.frame_RPM = self.frame_spinBox.value()
                 Settings.core_RPM = Settings.frame_RPM
