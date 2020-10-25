@@ -116,9 +116,7 @@ def spin_change(mot, self):
     if Settings.LINKED:
         if not mot:
 
-            print(int(decimal.Decimal(str(self.frame_spinBox.value())) * 100))
-
-            if int(decimal.Decimal(str(self.frame_spinBox.value())) * 100) in Settings.speed_dict:
+            if roundF(int(decimal.Decimal(str(self.frame_spinBox.value())) * 100)) in Settings.speed_dict:
                 Settings.frame_RPM = self.frame_spinBox.value()
                 Settings.core_RPM = Settings.frame_RPM
 
@@ -130,7 +128,7 @@ def spin_change(mot, self):
                 Settings.frame_RPM = self.frame_verticalSlider.sliderPosition() / 20
 
         else:
-            if int(decimal.Decimal(str(self.core_spinBox.value())) * 100) in Settings.speed_dict:
+            if roundF(int(decimal.Decimal(str(self.core_spinBox.value())) * 100)) in Settings.speed_dict:
                 Settings.core_RPM = self.core_spinBox.value()
                 Settings.frame_RPM = Settings.core_RPM
 
@@ -142,13 +140,13 @@ def spin_change(mot, self):
                 Settings.core_RPM = self.core_verticalSlider.sliderPosition() / 20
     else:
         if not mot:
-            if int(decimal.Decimal(str(self.frame_spinBox.value())) * 100) in Settings.speed_dict:
+            if roundF(int(decimal.Decimal(str(self.frame_spinBox.value())) * 100)) in Settings.speed_dict:
                 Settings.frame_RPM = self.frame_spinBox.value()
                 self.frame_verticalSlider.setValue(Settings.frame_RPM * 20)
             else:
                 Settings.frame_RPM = self.frame_verticalSlider.sliderPosition() / 20
         else:
-            if int(decimal.Decimal(str(self.core_spinBox.value())) * 100) in Settings.speed_dict:
+            if roundF(int(decimal.Decimal(str(self.core_spinBox.value())) * 100)) in Settings.speed_dict:
                 Settings.core_RPM = self.core_spinBox.value()
                 self.core_verticalSlider.setValue(Settings.core_RPM * 20)
             else:
@@ -158,9 +156,9 @@ def spin_change(mot, self):
     self.core_verticalSlider.blockSignals(False)
     self.frame_verticalSlider.blockSignals(False)
 
-    CMD = "1~2~" + getMicrostep(Settings.frame_RPM * 100) + "~" + str(Settings.speed_dict[int(decimal.Decimal(str(
-        Settings.frame_RPM)) * 100)]) + "~" + str(getMicrostep(Settings.core_RPM * 100)) + "~" + str(Settings.speed_dict[int(decimal.Decimal(str(
-            Settings.core_RPM)) * 100)])
+    CMD = "1~2~" + getMicrostep(Settings.frame_RPM * 100) + "~" + str(Settings.speed_dict[roundF(int(decimal.Decimal(str(
+        Settings.frame_RPM)) * 100))]) + "~" + str(getMicrostep(Settings.core_RPM * 100)) + "~" + str(Settings.speed_dict[roundF(int(decimal.Decimal(str(
+            Settings.core_RPM)) * 100))])
     Settings.sendCMD(CMD)
 
 
@@ -215,3 +213,7 @@ def getMicrostep(rpm):
         return "16"
     elif rpm <= 1000:
         return "8"
+
+
+def roundF(x):
+    return 5 * round(x / 5)
