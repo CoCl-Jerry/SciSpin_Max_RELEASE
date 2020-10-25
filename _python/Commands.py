@@ -201,6 +201,7 @@ def slider_Released():
 
 
 def getMicrostep(rpm):
+    print(rpm)
     if rpm <= 100:
         return "256"
     elif rpm <= 200:
