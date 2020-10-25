@@ -156,8 +156,8 @@ def spin_change(mot, self):
     self.core_verticalSlider.blockSignals(False)
     self.frame_verticalSlider.blockSignals(False)
 
-    CMD = "1~2~" + getMicrostep(Settings.frame_RPM * 100) + "~" + str(Settings.speed_dict[roundF(int(decimal.Decimal(str(
-        Settings.frame_RPM)) * 100))]) + "~" + str(getMicrostep(Settings.core_RPM * 100)) + "~" + str(Settings.speed_dict[roundF(int(decimal.Decimal(str(
+    CMD = "1~2~" + getMicrostep(roundF(Settings.frame_RPM * 100)) + "~" + str(Settings.speed_dict[roundF(int(decimal.Decimal(str(
+        Settings.frame_RPM)) * 100))]) + "~" + str(getMicrostep(roundF(Settings.core_RPM * 100))) + "~" + str(Settings.speed_dict[roundF(int(decimal.Decimal(str(
             Settings.core_RPM)) * 100))])
     Settings.sendCMD(CMD)
 
@@ -195,23 +195,23 @@ def slider_change(mot, self):
 
 
 def slider_Released():
-    CMD = "1~2~" + getMicrostep(Settings.frame_RPM * 100) + "~" + str(Settings.speed_dict[int(decimal.Decimal(str(Settings.frame_RPM)) * 100)]) + "~" + getMicrostep(
-        Settings.core_RPM * 100) + "~" + str(Settings.speed_dict[int(decimal.Decimal(str(Settings.core_RPM)) * 100)])
+    CMD = "1~2~" + getMicrostep(roundF(Settings.frame_RPM * 100)) + "~" + str(Settings.speed_dict[roundF(int(decimal.Decimal(str(Settings.frame_RPM)) * 100))]) + "~" + getMicrostep(
+        roundF(Settings.core_RPM * 100)) + "~" + str(Settings.speed_dict[roundF(int(decimal.Decimal(str(Settings.core_RPM)) * 100))])
     Settings.sendCMD(CMD)
 
 
 def getMicrostep(rpm):
-    if rpm <= 105:
+    if rpm <= 100:
         return "256"
-    elif rpm <= 205:
+    elif rpm <= 200:
         return "128"
-    elif rpm <= 305:
+    elif rpm <= 300:
         return "64"
-    elif rpm <= 405:
+    elif rpm <= 400:
         return "32"
-    elif rpm <= 605:
+    elif rpm <= 600:
         return "16"
-    elif rpm <= 1005:
+    elif rpm <= 1000:
         return "8"
 
 
