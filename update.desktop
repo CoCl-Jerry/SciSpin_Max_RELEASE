@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Clinostat Refresh
+Comment=Updates and Resets Clinostat
+Icon=/home/pi/Documents/SciSpin_Max_RELEASE/_image/update.ico
+Exec=sh /home/pi/Documents/SciSpin_Max_RELEASE/update.sh
+Type=Application
+Encoding=UTF-8
+Terminal=true
+Categories=None;
