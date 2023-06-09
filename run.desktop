@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Clinostat
+Comment=Start Clinostat
+Icon=/home/pi/Documents/SciSpin_Max_RELEASE/_image/logo.ico
+Exec=sh /home/pi/Documents/SciSpin_Max_RELEASE/Clinostat.sh
+Type=Application
+Encoding=UTF-8
+Terminal=true
+Categories=None;
