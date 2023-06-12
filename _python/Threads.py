@@ -8,7 +8,7 @@ import timeit
 import time
 import Commands
 import adafruit_mma8451
-import adafruit_bme280
+from adafruit_bme280 import basic as adafruit_bme280
 
 from time import sleep
 from PyQt5.QtCore import QThread, pyqtSignal
