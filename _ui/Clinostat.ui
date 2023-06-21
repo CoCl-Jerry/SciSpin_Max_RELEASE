@@ -267,14 +267,14 @@
          <item row="2" column="1">
           <widget class="QLabel" name="Start_label_3">
            <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;End LED: &lt;/span&gt;&lt;span style=&quot; font-size:7pt; font-weight:600;&quot;&gt;[2 , 87]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;End LED: &lt;/span&gt;&lt;span style=&quot; font-size:7pt; font-weight:600;&quot;&gt;[2 , 88]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
          <item row="2" column="0">
           <widget class="QLabel" name="Start_label">
            <property name="text">
-            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;Start LED: &lt;/span&gt;&lt;span style=&quot; font-size:7pt; font-weight:600;&quot;&gt;[1 , 86]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:7pt;&quot;&gt;Start LED: &lt;/span&gt;&lt;span style=&quot; font-size:7pt; font-weight:600;&quot;&gt;[1 , 87]&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
            </property>
           </widget>
          </item>
@@ -295,7 +295,7 @@
          <item row="3" column="0">
           <widget class="QSpinBox" name="Start_spinBox">
            <property name="toolTip">
-            <string>The first LED that you wish to control [1,86]</string>
+            <string>The first LED that you wish to control [1,87]</string>
            </property>
            <property name="prefix">
             <string># </string>
@@ -304,14 +304,14 @@
             <number>1</number>
            </property>
            <property name="maximum">
-            <number>86</number>
+            <number>87</number>
            </property>
           </widget>
          </item>
          <item row="3" column="1">
           <widget class="QSpinBox" name="End_spinBox">
            <property name="toolTip">
-            <string>The Last LED that you wish to control [2,87]</string>
+            <string>The Last LED that you wish to control [2,88]</string>
            </property>
            <property name="prefix">
             <string># </string>
@@ -320,10 +320,10 @@
             <number>2</number>
            </property>
            <property name="maximum">
-            <number>87</number>
+            <number>88</number>
            </property>
            <property name="value">
-            <number>87</number>
+            <number>88</number>
            </property>
           </widget>
          </item>
