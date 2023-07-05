@@ -31,17 +31,22 @@ class Cycle(QThread):
         on_stat = True
 
         while True:
-            for x in range(Settings.cycle_time * 60):
-                sleep(1)
-
-                if not Settings.cycle_running:
-                    on_stat = False
-                    break
-
             if on_stat:
+                for x in range(Settings.on_time * 60):
+                    sleep(1)
+
+                    if not Settings.cycle_running:
+                        on_stat = False
+                        break
                 Commands.extract_lights()
                 on_stat = False
             else:
+                for x in range(Settings.off_time * 60):
+                    sleep(1)
+
+                    if not Settings.cycle_running:
+                        on_stat = False
+                        break
                 Commands.deploy_lights()
                 on_stat = True
             if not Settings.cycle_running:
@@ -163,7 +168,7 @@ class Sensor(QThread):
 
     def run(self):
         i2c = busio.I2C(board.SCL, board.SDA)
-        time.sleep(5)
+        time.sleep(1)
         if Settings.acc_attached:
             sensor = adafruit_mma8451.MMA8451(i2c)
         if Settings.temp_attached:
