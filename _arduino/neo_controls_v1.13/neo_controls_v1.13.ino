@@ -23,11 +23,13 @@
 #define SLAVE_ADDRESS 0x08
 #define COMMANDSIZE 10
 
-TMC2208Stepper frame_driver = TMC2208Stepper(&Serial1);
+TMC2208Stepper core_driver = TMC2208Stepper(&Serial1);
+AccelStepper core_stepper = AccelStepper(core_stepper.DRIVER, STEP_PIN_CORE, DIR_PIN_CORE);
+
+TMC2208Stepper frame_driver = TMC2208Stepper(&Serial2);
 AccelStepper frame_stepper = AccelStepper(frame_stepper.DRIVER, STEP_PIN_FRAME, DIR_PIN_FRAME);
 
-TMC2208Stepper core_driver = TMC2208Stepper(&Serial2);
-AccelStepper core_stepper = AccelStepper(core_stepper.DRIVER, STEP_PIN_CORE, DIR_PIN_CORE);
+
 
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(NUM_LEDS, LED_PIN, NEO_GRBW + NEO_KHZ800);
 
@@ -122,15 +124,6 @@ void setup() {
 }
 
 void loop() {
-
-  // if (printTime >= 1000) {
-  //   printTime = 0;
-  //   float mSpeed = core_stepper.speed();
-  //   Serial.print(mSpeed);
-  //   Serial.print("  ");
-  //   Serial.println(core_stepper.currentPosition());
-  // }
-  // Microstep change handling
   if (ms_change) {
     frame_driver.microsteps(microstep_frame);
     delay(10);

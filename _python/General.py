@@ -1,7 +1,6 @@
 from PyQt5.QtGui import QPalette, QColor, QImage, QIcon, QPixmap
 from pyqtgraph import mkPen
 
-
 import time
 import socket
 
@@ -76,13 +75,13 @@ cycle_countdown = None
 motors_linked = True
 
 frame_enabled = False
-frame_RPM = None
+frame_RPM = 1
 frame_SPS = None
 frame_microstepping = None
 frame_direction = 1
 
 core_enabled = False
-core_RPM = None
+core_RPM = 1
 core_SPS = None
 core_microstepping = None
 core_direction = 1
