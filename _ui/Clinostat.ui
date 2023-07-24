@@ -1342,7 +1342,7 @@
           <x>10</x>
           <y>320</y>
           <width>581</width>
-          <height>81</height>
+          <height>71</height>
          </rect>
         </property>
         <property name="frameShape">
@@ -1357,7 +1357,7 @@
            <x>10</x>
            <y>10</y>
            <width>561</width>
-           <height>61</height>
+           <height>51</height>
           </rect>
          </property>
          <layout class="QGridLayout" name="gridLayout_4">
@@ -1445,7 +1445,7 @@
           <x>10</x>
           <y>320</y>
           <width>581</width>
-          <height>81</height>
+          <height>71</height>
          </rect>
         </property>
         <property name="frameShape">
@@ -1460,7 +1460,7 @@
            <x>10</x>
            <y>10</y>
            <width>561</width>
-           <height>61</height>
+           <height>51</height>
           </rect>
          </property>
          <layout class="QGridLayout" name="gridLayout_6">
@@ -1548,7 +1548,7 @@
           <x>10</x>
           <y>320</y>
           <width>581</width>
-          <height>81</height>
+          <height>71</height>
          </rect>
         </property>
         <property name="frameShape">
@@ -1563,7 +1563,7 @@
            <x>10</x>
            <y>10</y>
            <width>561</width>
-           <height>61</height>
+           <height>51</height>
           </rect>
          </property>
          <layout class="QGridLayout" name="gridLayout_7">
