@@ -212,7 +212,10 @@
            <number>100</number>
           </property>
           <property name="value">
-           <number>50</number>
+           <number>100</number>
+          </property>
+          <property name="sliderPosition">
+           <number>100</number>
           </property>
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
@@ -222,7 +225,7 @@
         <item>
          <widget class="QLabel" name="lighting_controller_fan_speed_value_label">
           <property name="text">
-           <string>Speed: 50%</string>
+           <string>Speed: 100%</string>
           </property>
          </widget>
         </item>
@@ -1313,7 +1316,7 @@
         <x>10</x>
         <y>10</y>
         <width>601</width>
-        <height>441</height>
+        <height>431</height>
        </rect>
       </property>
       <property name="currentIndex">
@@ -1636,7 +1639,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>459</y>
+        <y>450</y>
         <width>601</width>
         <height>61</height>
        </rect>
@@ -1725,7 +1728,7 @@
         <x>10</x>
         <y>10</y>
         <width>601</width>
-        <height>411</height>
+        <height>401</height>
        </rect>
       </property>
       <property name="currentIndex">
@@ -1741,7 +1744,7 @@
           <x>10</x>
           <y>10</y>
           <width>581</width>
-          <height>371</height>
+          <height>361</height>
          </rect>
         </property>
        </widget>
@@ -1756,7 +1759,7 @@
           <x>10</x>
           <y>10</y>
           <width>581</width>
-          <height>371</height>
+          <height>361</height>
          </rect>
         </property>
        </widget>
@@ -1766,7 +1769,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>430</y>
+        <y>420</y>
         <width>601</width>
         <height>91</height>
        </rect>
