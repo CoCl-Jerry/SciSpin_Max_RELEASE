@@ -282,7 +282,7 @@
      </widget>
      <widget class="QTabWidget" name="lighting_source_tabWidget">
       <property name="enabled">
-       <bool>false</bool>
+       <bool>true</bool>
       </property>
       <property name="geometry">
        <rect>
@@ -329,6 +329,31 @@
        <attribute name="title">
         <string>RING</string>
        </attribute>
+       <widget class="QLabel" name="lighting_ring_image_label_2">
+        <property name="geometry">
+         <rect>
+          <x>70</x>
+          <y>10</y>
+          <width>270</width>
+          <height>270</height>
+         </rect>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::NoFrame</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Sunken</enum>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="pixmap">
+         <pixmap>../_image/ring.png</pixmap>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
       </widget>
      </widget>
      <widget class="QFrame" name="lighting_LED_frame">
