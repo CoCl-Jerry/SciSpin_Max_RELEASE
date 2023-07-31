@@ -541,10 +541,10 @@
            <number>2</number>
           </property>
           <property name="maximum">
-           <number>86</number>
+           <number>90</number>
           </property>
           <property name="value">
-           <number>86</number>
+           <number>90</number>
           </property>
          </widget>
         </item>
