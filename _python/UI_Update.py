@@ -140,11 +140,11 @@ def lighting_source_update(self):
     self.lighting_white_value_spinBox.setValue(0)
 
     if self.lighting_source_tabWidget.currentIndex() == 0:
-        self.lighting_start_LED_value_spinBox.setMaximum(89)
-        self.lighting_end_LED_value_spinBox.setMaximum(90)
+        self.lighting_start_LED_value_spinBox.setMaximum(85)
+        self.lighting_end_LED_value_spinBox.setMaximum(86)
 
         self.lighting_start_LED_value_spinBox.setValue(1)
-        self.lighting_end_LED_value_spinBox.setValue(90)
+        self.lighting_end_LED_value_spinBox.setValue(86)
 
         self.lighting_LED_settings_text_label.setText(
             "<html><head/><body><p align="'center'"><span style="' font-weight:700;'">LED Settings: [1,90]</span></p></body></html>")
